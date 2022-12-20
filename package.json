@@ -1,0 +1,25 @@
+{
+  "name": "ditif.github.io",
+  "version": "1.0.0",
+  "description": "Access Integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/ditif.css -o ./public/css/ditif.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditif/ditif.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ditif/ditif.github.io/issues"
+  },
+  "homepage": "https://github.com/ditif/ditif.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}
