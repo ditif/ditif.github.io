@@ -4,7 +4,7 @@ Access Integration you may use vscode to develop, install this Extension :
 2. PostCSS Language Support
 3. Live Preview
 
-Open terminal and run
+Install [Latest Nodejs LTS](https://nodejs.org/en/download/), restart your computer. Open terminal and run
 
 ```sh
 npm run dev
