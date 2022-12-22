@@ -550,19 +550,41 @@ video {
   bottom: 0.5rem;
 }
 
+.float-right {
+  float: right;
+}
+
+.m-60 {
+  margin: 15rem;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.my-60 {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+.my-40 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
 .mx-60 {
   margin-left: 15rem;
   margin-right: 15rem;
-}
-
-.mx-24 {
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
 }
 
 .mx-7 {
@@ -570,9 +592,8 @@ video {
   margin-right: 1.75rem;
 }
 
-.mx-32 {
-  margin-left: 8rem;
-  margin-right: 8rem;
+.mt-40 {
+  margin-top: 10rem;
 }
 
 .mt-60 {
@@ -587,14 +608,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-0 {
-  margin-top: 0px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -607,10 +620,6 @@ video {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-5 {
   height: 1.25rem;
 }
@@ -621,6 +630,22 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .w-5 {
@@ -641,6 +666,20 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.cursor-s-resize {
+  cursor: s-resize;
+}
+
+.scroll-my-40 {
+  scroll-margin-top: 10rem;
+  scroll-margin-bottom: 10rem;
+}
+
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
 }
 
 .grid-cols-1 {
@@ -863,18 +902,6 @@ video {
 .ring-indigo-200 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:bg-blue-800:hover {
