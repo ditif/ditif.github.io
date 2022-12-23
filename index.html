@@ -11,77 +11,196 @@
 <!-- component -->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <section>
-    
-<div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-    <div class="p-4 flex flex-row items-center justify-between">
-      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-      <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /> 
-            </svg>
-        </span>
-          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
-          <div class="grid max-w-screen-xl px-6 py-9 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
-            <ul>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </div>    
-    </nav>
-  </div>
-</div>
+  
 </section>
         
 <section>
+      
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-6">
+          <div class="p-4 flex flex-row items-center justify-between">
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-10 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 -scroll-mt-16 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+              <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /> 
+                  </svg>
+              </span>
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <div x-show="open" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                <div class="grid max-w-screen-xl px-2 py-9 mx-auto text-gray-900 dark:text-white sm:grid-cols-3 md:px-6">
+                  <ul>
+                      <li>
+                          <a href="https://www.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                              <div class="font-semibold"><img
+                      src="src/images/ulbi.png"
+                      style="text-align: center; "
+                      
+                    /></div>
+                              <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                          </a>
+                      </li>
+                      <li>
+                        <a href="https://www.sip.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/sip.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="https://www.cdc.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/cdc.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                        <a href="https://www.euis.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/euis.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/ekuisioner.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/ELEARNING.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      
+                  </ul><ul>
+                    <li>
+                      <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/dias.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="https://www.alpha.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/alpha.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/iteung.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    
+                </ul><ul>
+                    <li>
+                      <a href="https://www.aptimas.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/aptimas.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/sumi.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="https://www.sister.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/sister.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/skp.png"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/sandi.PNG"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/eva.png"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  
+              </ul>
+              
+                
+                </div>
+              </div>
+            </div>    
+          </nav>
+        </div>
+      </div>
     <div class="relative mt-60 mx-16 mb-2">
     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -91,13 +210,14 @@
             <div  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
+            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
             <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
         </div>
         
     </form>
 </div>
-</div></section>
+</div>
+</section>
         
         
 <section>
@@ -105,95 +225,74 @@
         <div class="grid grid-cols-4 gap-6">
 
             <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://www.ulbi.ac.id/">
+                  <img src="src/images/ulbi.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://sip.ulbi.ac.id/">
+                  <img src="src/images/sip.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://cdc.ulbi.ac.id/">
+                  <img src="src/images/cdc.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://dias.ulbi.ac.id/">
+                  <img src="src/images/dias.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://ekuesioner.ulbi.ac.id/">
+                  <img src="src/images/ekuisioner.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://euis.ulbi.ac.id/index.php/auth">
+                  <img src="src/images/euis.png" alt="">
+                </a> 
               </div>
               <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                  
-                />
+                <a href="https://elearning.ulbi.ac.id">
+                  <img src="src/images/ELEARNING.png" alt="">
+                </a> 
               </div>
               <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                />
+                <a href="#">
+                  <img src="src/images/iteung.png" alt="">
+                </a> 
               </div>
               <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                />
+                <a href="#">
+                  <img src="src/images/perpustakaan.png" alt="">
+                </a> 
               </div>
               <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                />
+                <a href="https://aptimas.ulbi.ac.id/login">
+                  <img src="src/images/aptimas.png" alt="">
+                </a> 
               </div>
               <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                />
+                <a href="#">
+                  <img src="src/images/sumi.png" alt="">
+                </a> 
               </div>
               <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
-                  class="img-fluid grayscale"
-                  style="max-width: 120px"
-                />
+                <a href="#">
+                  <img src="src/images/skp.png" alt="">
+                </a> 
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <a href="#">
+                  <img src="src/images/eva.png" alt="">
+                </a> 
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <a href="#">
+                  <img src="src/images/sister.png" alt="">
+                </a> 
               </div>
         </div>
     </div>
