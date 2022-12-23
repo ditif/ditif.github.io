@@ -8,122 +8,312 @@
     <link rel="stylesheet" href="public/css/ditif.css">
 </head>
 <body>
-
-
- <section>
-    halo
-    <svg class="float-right h-6 mr-3" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
-
+<!-- component -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<section>
+  
 </section>
-
-        <div class="relative mt-60 mx-7 mb-6">
-            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        
+<section>
+      
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-6">
+          <div class="p-4 flex flex-row items-center justify-between">
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-10 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 -scroll-mt-16 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+              <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /> 
+                  </svg>
+              </span>
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <div x-show="open" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                <div class="grid max-w-screen-xl px-2 py-9 mx-auto text-gray-900 dark:text-white sm:grid-cols-3 md:px-6">
+                  <ul>
+                      <li>
+                          <a href="https://www.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                              <div class="font-semibold"><img
+                      src="src/images/ulbi.png"
+                      style="text-align: center; "
+                      
+                    /></div>
+                              <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                          </a>
+                      </li>
+                      <li>
+                        <a href="https://www.sip.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/sip.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="https://www.cdc.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/cdc.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                        <a href="https://www.euis.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/euis.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/ekuisioner.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      <li>
+                        <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                          <div class="font-semibold"><img
+                        src="src/images/ELEARNING.png"
+                  style="text-align: center; "
+                  
+                /></div>
+                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                      </a>
+                      </li>
+                      
+                  </ul><ul>
+                    <li>
+                      <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/dias.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="https://www.alpha.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/alpha.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/iteung.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    
+                </ul><ul>
+                    <li>
+                      <a href="https://www.aptimas.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/aptimas.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/sumi.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="https://www.sister.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                        <div class="font-semibold"><img
+                      src="src/images/sister.png"
+                style="text-align: center; "
+                
+              /></div>
+                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                    </a>
+                    </li>
+                    
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/skp.png"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/sandi.PNG"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                      <div class="font-semibold"><img
+                    src="src/images/eva.png"
+              style="text-align: center; "
+              
+            /></div>
+                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
+                  </a>
+                  </li>
+                  
+              </ul>
+              
+                
+                </div>
+              </div>
+            </div>    
+          </nav>
+        </div>
+      </div>
+    <div class="relative mt-60 mx-16 mb-2">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div>
+    <div><form>   
+        <div  class="flex justify-center" class="relative">
+            <div  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search ..." required>
+            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
             <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
         </div>
-
+        
+    </form>
+</div>
+</div></section>
+        
+        
 <section>
-    
-    <!-- component -->
-<div class="flex justify-center items-center h-full lg:h-screen overflow-auto">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+    <div class="container my-10 px-6 mx-auto">
+        <div class="grid grid-cols-4 gap-6">
 
-        <!-- Start Card -->
-        <div class="bg-blue-600 pt-1 px-2 bg-gradient-to-b from-blue-400 to-blue-500 rounded-xl shadow-lg w-52">
-            <div class="flex justify-center">
-                <div class="flex justify-center p-4 bg-blue-400 ring-2 ring-blue-300 rounded-lg shadow-xl w-32" >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="p-4">
-                <p class="text-white font-semibold" >Photos</p>
-                <div class="flex justify-between mt-2">
-                    <p class="text-gray-200">20,100 Files</p>
-                    <p class="text-white" >6.5GB</p>
-                </div>
-            </div>
-        </div>
-        <!--End Card -->
-
-        <!-- Start Card -->
-        <div class="bg-blue-600 pt-1 px-2 bg-gradient-to-b from-yellow-300 to-yellow-400 rounded-xl shadow-lg w-52">
-            <div class="flex justify-center">
-                <div class="flex justify-center p-4 bg-yellow-300 ring-2 ring-yellow-100 rounded-lg shadow-xl w-32" >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                    </svg>
-                </div>
-            </div>
-            <div class="p-4">
-                <p class="text-white font-semibold" >Music</p>
-                <div class="flex justify-between mt-2">
-                    <p class="text-gray-200">200 Files</p>
-                    <p class="text-white" >650 MB</p>
-                </div>
-            </div>
-        </div>
-        <!--End Card -->
-
-        <!-- Start Card -->
-        <div class="bg-blue-600 pt-1 px-2 bg-gradient-to-b from-pink-400 to-pink-500 rounded-xl shadow-lg w-52">
-            <div class="flex justify-center">
-                <div class="flex justify-center p-4 bg-pink-300 ring-2 ring-pink-200 rounded-lg shadow-xl w-32" >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="p-4">
-                <p class="text-white font-semibold">Videos</p>
-                <div class="flex justify-between mt-2">
-                    <p class="text-gray-200">150 Files</p>
-                    <p class="text-white" >750 MB</p>
-                </div>
-            </div>
-        </div>
-        <!--End Card -->
-       
-        <!-- Start Card -->
-        <div class="bg-blue-600 pt-1 px-2 bg-gradient-to-b from-indigo-400 to-indigo-500 rounded-xl shadow-lg w-52">
-            <div class="flex justify-center">
-                <div class="flex justify-center p-4 bg-indigo-300 ring-2 ring-indigo-200 rounded-lg shadow-xl w-32" >
-                   <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="p-4">
-                <p class="text-white font-semibold">Documents</p>
-                <div class="flex justify-between mt-2">
-                    <p class="text-gray-200">200 Files</p>
-                    <p class="text-white" >20 MB</p>
-                </div>
-            </div>
-        </div>
-        <!--End Card -->
-
-        <!-- Start Card -->
-        <div class="bg-red-600 pt-1 px-2 bg-gradient-to-b from-red-400 to-red-500 rounded-xl shadow-lg w-52">
-            <div class="flex justify-center">
-                <div class="flex justify-center p-4 bg-red-300 ring-2 ring-red-200 rounded-lg shadow-xl w-32" >
-                   <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="p-4">
-                <p class="text-white font-semibold">Drive</p>
-                <div class="flex justify-between mt-2">
-                    <p class="text-gray-200">200 Files</p>
-                    <p class="text-white" >20 MB</p>
-                </div>
-            </div>
+            <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12  lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                  
+                />
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                />
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                />
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                />
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                />
+              </div>
+              <div class="mb-12 lg:mb-2 mx-auto bg-white block rounded-lg shadow-lg">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/8.png"
+                  class="img-fluid grayscale"
+                  style="max-width: 120px"
+                />
+              </div>
         </div>
     </div>
 </div>
