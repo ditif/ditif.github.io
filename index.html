@@ -6,304 +6,284 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Integrator</title>
     <link rel="stylesheet" href="public/css/ditif.css">
+    <link href="src/css/line.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/icons.css" />
+    <link rel="stylesheet" href="src/css/tailwind.css" />
 </head>
-<body>
-<!-- component -->
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<section>
-  
-</section>
-        
-<section>
-      
-    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-6">
-          <div class="p-4 flex flex-row items-center justify-between">
+<body class="font-nunito text-base text-black dark:text-white dark:bg-slate-900">
+  <nav id="topnav" class="defaultscroll is-sticky">
+      <div class="container">
+         
+          <div class="menu-extras">
+              <div class="menu-item">
+                  <!-- Mobile menu toggle-->
+                  <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                      <div class="lines">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </a>
+              </div>
           </div>
-          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-10 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-            <div @click.away="open = false" class="relative" x-data="{ open: false }">
-              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 -scroll-mt-16 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-              <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /> 
-                  </svg>
-              </span>
-                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <div x-show="open" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
-                <div class="grid max-w-screen-xl px-2 py-9 mx-auto text-gray-900 dark:text-white sm:grid-cols-3 md:px-6">
-                  
-                  <ul>
-                      <li>
-                          <a href="https://www.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                              <div class="font-semibold"><img
-                      src="src/images/ulbi.png"
-                      style="text-align: center; "
-                      
-                    /></div>
-                              <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                          </a>
-                      </li>
-                      <li>
-                        <a href="https://www.sip.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                          <div class="font-semibold"><img
-                        src="src/images/sip.png"
-                  style="text-align: center "
-                  
-                /></div>
-                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                      </a>
-                      </li>
-                      <li>
-                        <a href="https://www.cdc.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                          <div class="font-semibold"><img
-                        src="src/images/cdc.png"
-                  style="text-align: center; "
-                  
-                /></div>
-                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                      </a>
-                      </li>
-                  </ul>
-                  <ul>
-                      <li>
-                        <a href="https://www.euis.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                          <div class="font-semibold"><img
-                        src="src/images/euis.png"
-                  style="text-align: center; "
-                  
-                /></div>
-                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                      </a>
-                      </li>
-                      <li>
-                        <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                          <div class="font-semibold"><img
-                        src="src/images/ekuisioner.png"
-                  style="text-align: center; "
-                  
-                /></div>
-                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                      </a>
-                      </li>
-                      <li>
-                        <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                          <div class="font-semibold"><img
-                        src="src/images/ELEARNING.png"
-                  style="text-align: center; "
-                  
-                /></div>
-                          <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                      </a>
-                      </li>
-                      
-                  </ul><ul>
-                    <li>
-                      <a href="https://www.elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/dias.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    <li>
-                      <a href="https://www.alpha.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/alpha.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    <li>
-                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/iteung.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    
-                </ul><ul>
-                    <li>
-                      <a href="https://www.aptimas.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/aptimas.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    <li>
-                      <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/sumi.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    <li>
-                      <a href="https://www.sister.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
-                        <div class="font-semibold"><img
-                      src="src/images/sister.png"
-                style="text-align: center; "
-                
-              /></div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                    </a>
-                    </li>
-                    
-                </ul>
-                <ul>
-                  <li>
-                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                      <div class="font-semibold"><img
-                    src="src/images/skp.png"
-              style="text-align: center; "
-              
-            /></div>
-                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                  </a>
+
+        
+
+          <div id="navigation">
+              <!-- Navigation Menu-->   
+              <ul class="navigation-menu nav-light">                       
+                 
+
+
+                  <li class="has-submenu parent-parent-menu-item">
+                      <a href="javascript:void(0)"></a><span class="menu-arrow"></span>
+                      <ul class="submenu megamenu "
+                      style="margin-left: 20px;">
+                          <li>
+                              <ul>
+                                  <li class="megamenu-head"></li>
+                                  <li><a href="https://www.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/ulbi2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://sip.ulbi.ac.id/siap/besan.depan.php" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/sip2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://elearning.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/ELEARNING2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://cdc.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/cdc2.png"/></div>
+                                  </a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <ul>
+                                  <li class="megamenu-head"></li>
+                                  <li><a href="https://dias.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/dias2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://euis.ulbi.ac.id/index.php/auth" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/euis2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://alpha.ulbi.ac.id/" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/alpha2.png"/></div>
+                                  </a></li>
+                                  <li><a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/perpustakaan2.png"/></div>
+                                  </a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <ul>
+                                  <li class="megamenu-head"></li>
+                                  <li><a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/sumi2.png"/></div>
+                                  </a></li>
+                                  <li><a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/skp2.png"/></div>
+                                  </a></li>
+                                  <li><a href="https://aptimas.ulbi.ac.id/login" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/aptimas2.png"/></div>
+                                  </a></li>
+                                  <li><a href="#" class="block p-3 rounded-lg:bg-gray-100">
+                                      <div class="font-semibold"><img src="src/images/iteung2.png"/></div>
+                                  </a></li>
+                              </ul>
+                          </li>
+                          
+
+                          
+
+                          
+                      </ul>
                   </li>
-                  <li>
-                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                      <div class="font-semibold"><img
-                    src="src/images/sandi.PNG"
-              style="text-align: center; "
-              
-            /></div>
-                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                  </a>
-                  </li>
-                  <li>
-                    <a href="#" class="block p-3 rounded-lg:bg-gray-100">
-                      <div class="font-semibold"><img
-                    src="src/images/eva.png"
-              style="text-align: center; "
-              
-            /></div>
-                      <span class="text-sm font-light text-gray-500 dark:text-gray-400"></span>
-                  </a>
-                  </li>
+
                   
               </ul>
-              
-                
-                </div>
-              </div>
-            </div>    
-          </nav>
-        </div>
+          </div>
       </div>
-    <div class="relative mt-60 mx-16 mb-2">
-    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-    </div>
-    <div><form>   
-        <div  class="flex justify-center" class="relative">
-            <div  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            </div>
-            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
-            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-        </div>
-        
-    </form>
-</div>
-</div>
-</section>
+  </nav>
+  
 
-        
-<section>
-    <div class="container my-10 px-20 py-3 mx-auto">
-        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+  <!-- Start Hero -->
+  <section class="relative table w-full py-36 lg:py-44 bg-[url('../../assets/images/job/job.jpg')] bg-no-repeat bg-center">
+      <div class="absolute inset-0 bg-black opacity-80"></div>
+      <div class="container">
+          <div class="grid grid-cols-1 pb-8 text-center mt-12">
+              <h3 class="md:text-4xl text-3xl md:leading-normal tracking-wide leading-normal font-medium text-white">
+                  <div class="">
+                      <h1 class="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5">All-in-one  <span class="typewrite" data-period="2000" data-type='[ "Aplikasi Mahasiswa", "Aplikasi Dosen" ]'> <span class="wrap"></span> </span></h1>
+                      <div class="subcribe-form mt-6 mb-3">
+                        
+                      </div>
+                  </div>
+              </h3>
+          </div><!--end grid-->
+      </div><!--end container-->
 
-            <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://www.ulbi.ac.id/">
-                  <img src="src/images/ulbi2.png" width="120px" style="margin-left: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://sip.ulbi.ac.id/">
-                  <img src="src/images/sip2.png" width="120px" alt="">
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://cdc.ulbi.ac.id/">
-                  <img src="src/images/cdc2.png" width="120px" alt="">
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://dias.ulbi.ac.id/">
-                  <img src="src/images/dias2.png"width="120px" style="margin-right: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://ekuesioner.ulbi.ac.id/">
-                  <img src="src/images/ekuisioner2.png" width="120px" style="margin-left: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://euis.ulbi.ac.id/index.php/auth">
-                  <img src="src/images/euis2.png" width="120px" alt="" >
-                </a> 
-              </div>
-              <div class="mb-12  lg:mb-2 mx-auto ">
-                <a href="https://elearning.ulbi.ac.id">
-                  <img src="src/images/ELEARNING2.png" alt="" width="130px">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/iteung2.png" width="120px"  style="margin-right: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/alpha2.png" width="120px" style="margin-left: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/perpustakaan2.png" width="120px" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="https://aptimas.ulbi.ac.id/login">
-                  <img src="src/images/aptimas2.png"width="120px"  alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/sumi2.png" width="120px" style="margin-right: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/skp2.png"width="120px" style="margin-left: 90px;" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/eva2.png" width="120px" alt="">
-                </a> 
-              </div>
-              <div class="mb-12 lg:mb-2 mx-auto ">
-                <a href="#">
-                  <img src="src/images/sister2.png"width="120px"  alt="">
-                </a> 
-              </div>
-        </div>
-    </div>
-</section>    
+      <div class="absolute text-center z-10 bottom-5 right-0 left-0 mx-3">
+         
+      </div>
+  </section><!--end section-->
+  <div class="relative">
+      <div class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden text-gray-50 dark:text-slate-800">
+          <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+          </svg>
+      </div>
+  </div>
+  <!-- End Hero -->
 
+  <!-- Start Section-->
+  <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
+      <div class="container">
+          <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
+              <a href="https://www.ulbi.ac.id/" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/ulbi2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
 
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">ULBI</span>
+
+                  </div>
+              </a>
+              
+              <a href="https://sip.ulbi.ac.id/siap/besan.depan.php" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/sip2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">SIP</span>
+
+                  </div>
+              </a>
+              
+              <a href="https://elearning.ulbi.ac.id/" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/ELEARNING2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">E-Learning</span>
+
+                  </div>
+              </a>
+              
+              <a href="https://cdc.ulbi.ac.id/" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/cdc2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">CDC</span>
+
+                  </div>
+              </a>
+              
+              <a href="https://dias.ulbi.ac.id/" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/dias2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">DIAS</span>
+
+                      <!-- <span class="text-base text-slate-400 block"><i class="uil uil-map-marker text-indigo-600 mr-1"></i> U.S.A.</span> -->
+                  </div>
+              </a>
+              
+              <a href="https://euis.ulbi.ac.id/index.php/auth" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/euis2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">EUIS</span>
+
+                  </div>
+              </a>
+              
+              <a href="https://alpha.ulbi.ac.id/" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/alpha2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">ALPHA</span>
+
+                  </div>
+              </a>
+              
+              <a href="#" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/sister2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">SISTER</span>
+
+                  </div>
+              </a>
+              
+              <a href="#" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/perpustakaan.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">PERPUSTAKAAN</span>
+
+                  </div>
+              </a>
+              
+              <a href="#" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/aptimas2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">APTIMAS</span>
+
+                  </div>
+              </a>
+              
+              <a href="#" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/sumi2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">SUMI</span>
+
+                  </div>
+              </a>
+              
+              <a href="#" class="group bg-white dark:bg-slate-900 p-6 rounded shadow dark:shadow-gray-800 hover:shadow-md dark:hover:shadow-gray-700 border-4 border-white dark:border-slate-900 hover:border-b-indigo-600 dark:hover:border-b-indigo-600 text-center duration-500 ease-in-out">
+                  <img src="src/images/skp2.png" class="h-16 w-16 mx-auto p-3 rounded-full bg-gray-50 dark:bg-slate-800 shadow-md dark:shadow-gray-800" alt="">
+
+                  <div class="content mt-3">
+                      <span class="text-lg font-semibold group-hover:text-indigo-600 transition duration-500 block">SKP</span>
+
+                  </div>
+              </a>
+          </div><!--end grid-->
+      </div><!--end container-->
+
+  </section><!--end section-->
+  <!-- End Section-->
+
+  <!-- Footer Start -->
+  <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
+      <div class="container text-center">
+          <div class="grid grid-cols-1">
+              <div class="py-[30px] px-0">
+                  
+              </div>
+          </div>
+      </div><!--end container-->
+
+      <div class="py-[30px] px-0 border-t border-slate-800">
+          <div class="container text-center">
+              <div class="grid grid-cols-1">
+                  <div class="text-center">
+                  </div>
+              </div><!--end grid-->
+          </div><!--end container-->
+      </div>
+  </footer><!--end footer-->
+  <!-- Footer End -->
+
+  <!-- Back to top -->
+  <!-- Back to top -->
+
+  <!-- Switcher -->
+ 
+  <!-- Switcher -->
+
+  <!-- JAVASCRIPTS -->
+  <script src="src/js/feather.min.js"></script>
+  <script src="src/js/plugins.init.js"></script>
+  <script src="src/js/app.js"></script>
+  <!-- JAVASCRIPTS -->
 </body>
 </html>
